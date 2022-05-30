@@ -1,5 +1,5 @@
-const Fundamentos = () => {
+const FirstComponent = () => {
   return <p>Meu Primeiro Componente</p>;
 };
 
-export default Fundamentos;
+export default FirstComponent;
