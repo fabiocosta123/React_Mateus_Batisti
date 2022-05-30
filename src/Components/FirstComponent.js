@@ -1,5 +1,12 @@
+import MyComponent from "./MyComponent";
+
 const FirstComponent = () => {
-  return <p>Meu Primeiro Componente</p>;
+  return (
+    <div>
+      <p>Meu primeiro componente</p>
+      <MyComponent />
+    </div>
+  );
 };
 
 export default FirstComponent;
