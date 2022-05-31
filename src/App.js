@@ -1,20 +1,12 @@
-import FirstComponent from "./Components/FirstComponent";
-import TemplateExpression from "./Components/TemplateExpression";
-import Event from "./Components/Events";
-import Challenge from "./Components/Challenge";
-//styles.css
-import "./App.css";
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Fundamentos do React</h1>
-      <FirstComponent />
-      <TemplateExpression />
-      <Event />
-      <Challenge />
+    <div>
+      <h1>Avançando em React</h1>
+      <div>
+        <img src="./logo192" alt="logo" />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
