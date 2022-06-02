@@ -1,5 +1,8 @@
 import ShowUserName from "./Components/ShowUserName";
 import CarDetails from "./Components/CarDetails";
+import Fragments from "./Components/Fragments";
+import Container from "./Components/Container";
+import ExecuteFunctions from "./Components/ExecuteFunctions";
 
 const App = () => {
   const cars = [
@@ -9,6 +12,10 @@ const App = () => {
     { marca: "Porsche", km: 0, cor: "Vermelho", newCar: true },
     { marca: "Toyota", km: 50000, cor: "Preto", newCar: false },
   ];
+
+  const ShowMessage = () => {
+    alert("Evento do componente Pai");
+  };
 
   return (
     <div>
@@ -25,12 +32,20 @@ const App = () => {
         {/*loop em lista usando map */}
         {cars.map((cars) => (
           <CarDetails
+            key={cars.id}
             marca={cars.marca}
             km={cars.km}
             cor={cars.cor}
             newCar={cars.newCar}
           />
         ))}
+        <Fragments />
+        {/*children props */}
+        <Container MyValue="testando">
+          <p>Aqui estou usando o children</p>
+        </Container>
+        {/*Executando funções */}
+        <ExecuteFunctions ShowMessage={ShowMessage} />
       </div>
     </div>
   );
