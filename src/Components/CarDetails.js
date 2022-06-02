@@ -1,4 +1,4 @@
-// desustruturando a props não preciso colocar props.algumaCoisa, a desustruração é feita entre chaves
+// destruturando a props não preciso colocar props.algumaCoisa, a destruturação é feita entre chaves
 const CarDetails = ({ marca, km, cor, newCar }) => {
   return (
     <div>
