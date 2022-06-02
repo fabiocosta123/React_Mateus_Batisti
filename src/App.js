@@ -7,8 +7,15 @@ import Container from "./Components/Container";
 import ExecuteFunctions from "./Components/ExecuteFunctions";
 import Message from "./Components/Message";
 import ChangeMessageStates from "./Components/ChangeMessageStates";
+import UserDetails from "./Components/UserDetails";
 
 const App = () => {
+  const userDetails = [
+    { id: 1, name: "Fábio Costa", job: "Programer", age: 38 },
+    { id: 2, name: "Juliana Cunha Silva", job: "Executive", age: 36 },
+    { id: 3, name: "Gabriel Cunha", job: "Students", age: 13 },
+  ];
+
   const cars = [
     { marca: "Pegeout", km: 12000, cor: "Bege", newCar: false },
 
@@ -59,6 +66,15 @@ const App = () => {
         {/*State lift */}
         <Message msg={message} />
         <ChangeMessageStates handleMessage={handleMessage} />
+        {/*Desafio do curso, tirar ou não habilitação */}
+        {userDetails.map((userDetails) => (
+          <UserDetails
+            key={userDetails.id}
+            name={userDetails.name}
+            job={userDetails.job}
+            age={userDetails.age}
+          />
+        ))}
       </div>
     </div>
   );
