@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 import ShowUserName from "./Components/ShowUserName";
 import CarDetails from "./Components/CarDetails";
 import Fragments from "./Components/Fragments";
 import Container from "./Components/Container";
 import ExecuteFunctions from "./Components/ExecuteFunctions";
+import Message from "./Components/Message";
+import ChangeMessageStates from "./Components/ChangeMessageStates";
 
 const App = () => {
   const cars = [
@@ -15,6 +19,12 @@ const App = () => {
 
   const ShowMessage = () => {
     alert("Evento do componente Pai");
+  };
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
   };
 
   return (
@@ -46,6 +56,9 @@ const App = () => {
         </Container>
         {/*Executando funções */}
         <ExecuteFunctions ShowMessage={ShowMessage} />
+        {/*State lift */}
+        <Message msg={message} />
+        <ChangeMessageStates handleMessage={handleMessage} />
       </div>
     </div>
   );
