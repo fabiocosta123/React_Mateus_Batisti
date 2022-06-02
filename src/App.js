@@ -1,4 +1,5 @@
 import ListRender from "./Components/ListRender";
+import ConditionalRender from "./Components/ConditionalRender";
 
 const App = () => {
   return (
@@ -6,6 +7,7 @@ const App = () => {
       <h1>Avançando em React</h1>
       <div>
         <ListRender />
+        <ConditionalRender />
       </div>
     </div>
   );
