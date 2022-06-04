@@ -8,6 +8,7 @@ import ExecuteFunctions from "./Components/ExecuteFunctions";
 import Message from "./Components/Message";
 import ChangeMessageStates from "./Components/ChangeMessageStates";
 import UserDetails from "./Components/UserDetails";
+import "Pages" from "./Components/Pages.css"
 
 const App = () => {
   const userDetails = [
